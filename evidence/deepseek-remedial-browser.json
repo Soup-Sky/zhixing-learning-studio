@@ -1,0 +1,28 @@
+{
+  "kind": "live_deepseek_synthetic_remedial_browser_check",
+  "observed_at": "2026-10-08T14:13:44+08:00",
+  "course_id": "e8744bb1af5d4c3eae497b61ff68ee54",
+  "submission_task_id": "4b9746c1b53b47be91bd288d07aa6b95",
+  "remedial_task_id": "820cb8a26a634002adebedc36a51c889",
+  "input": "Two deliberately wrong answers to the first u01 assignment; synthetic learner, not a real student.",
+  "observed": {
+    "grade_score": 0,
+    "grade_decision": "review",
+    "mastery_status": "review",
+    "unit_before_and_after": "u01",
+    "remedial_lesson_title": "函数与定义域：从“合法输入”到复合函数（补救版）",
+    "new_assignment_question_count": 2,
+    "browser": "After reloading the 1.1.0 local application, the course showed pending review, the remedial lesson, two new questions, and the previous 0/100 feedback."
+  },
+  "new_model_events": [
+    {"agent": "grading", "provider": "DeepSeek", "model": "deepseek-chat", "prompt_tokens": 2984, "completion_tokens": 853, "estimated_cost_cny": 0.008527},
+    {"agent": "teaching", "provider": "DeepSeek", "model": "deepseek-chat", "prompt_tokens": 8242, "completion_tokens": 2626, "estimated_cost_cny": 0.024362},
+    {"agent": "assignment", "provider": "DeepSeek", "model": "deepseek-chat", "prompt_tokens": 5230, "completion_tokens": 1163, "estimated_cost_cny": 0.013949}
+  ],
+  "cost_note": "Estimated at configured list prices; total CNY 0.046838. This is not a provider bill.",
+  "limitations": [
+    "Open and ambiguous mathematics remains pending human review; this check does not prove an automatically finalized grade.",
+    "The new questions were displayed in the browser, but their subject correctness has not been reviewed by a teacher.",
+    "This check does not validate two consecutive units, a service restart, or the live out-of-scope rejection path."
+  ]
+}

@@ -1,0 +1,445 @@
+{
+  "kind": "live_synthetic_learner_acceptance",
+  "timestamp": "2026-10-08T06:05:21.557477+00:00",
+  "note": "Synthetic personas and reference answers are functional tests, not human learning outcomes.",
+  "scenarios": [
+    {
+      "name": "beginner",
+      "profile": {
+        "topic": "单变量微积分：从函数到极限",
+        "background": "只学过高中函数，对极限完全陌生。",
+        "goal": "先理解函数和极限的直观含义，能完成入门题。",
+        "hours_per_week": 4,
+        "minutes_per_session": 40,
+        "search_web": false,
+        "request_id": "a9b85d5276574b2bbf95fd0dafc89652"
+      },
+      "create_status": "completed",
+      "course_id": "e8744bb1af5d4c3eae497b61ff68ee54",
+      "diagnostic_question_count": 2,
+      "diagnostic_status": "completed",
+      "diagnostic_score": 0.0,
+      "mastery": {
+        "u01": "unknown",
+        "u02": "unknown",
+        "u03": "unknown",
+        "u04": "unknown",
+        "u05": "unknown",
+        "u06": "unknown",
+        "u07": "unknown",
+        "u08": "unknown",
+        "u09": "unknown",
+        "u10": "unknown",
+        "u11": "unknown",
+        "u12": "unknown"
+      },
+      "plan": {
+        "unit_order": [
+          "u01",
+          "u02",
+          "u03"
+        ],
+        "reason": "前测 q1（函数定义域）与 q3（极限与函数值、可去间断）均回答“不知道”，得分 0；虽然开放题标记需人工复核，但证据显示未作答，且 u01-u12 的掌握状态均为 unknown，因此不能跳过基础直接进入极限。目标聚焦“函数和极限的直观含义、完成入门题”，所以按先修链覆盖 u01→u02→u03：u01 修复定义域与函数概念，u02 建立极限直观、左右极限和 0/0 型入门计算，u03 连接 q3 中的连续性与可去间断。每周 4 小时、每次 40 分钟，共 6 次；不进入导数及后续单元，避免超出目标。",
+        "weekly_hours": 4.0,
+        "sessions": [
+          {
+            "unit_id": "u01",
+            "minutes": 40,
+            "focus": "函数与表达式区分、复合函数定义域检查；结合图像只能提示不能代替定义域论证，完成定义域入门题并口头解释每一步限制来源。"
+          },
+          {
+            "unit_id": "u02",
+            "minutes": 40,
+            "focus": "单侧极限与双侧极限：左右极限相同才存在双侧极限；用 1/x 等例子区分有限极限与无穷趋势，避免只看一边或把函数值当极限。"
+          },
+          {
+            "unit_id": "u03",
+            "minutes": 40,
+            "focus": "连续三条件与可去间断：检查 f(a) 有定义、极限存在、二者相等；回到 q3 说明补充 f(1)=2 后可消除间断，完成与极限入门相关的连续性判断题。"
+          }
+        ],
+        "goal": "先理解函数和极限的直观含义，能完成入门题。"
+      },
+      "current_unit_id": "u01",
+      "lesson_created": true,
+      "assignment_count": 2,
+      "events": [
+        {
+          "agent": "diagnostic",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 4414,
+            "completion_tokens": 3506,
+            "total_tokens": 7920
+          },
+          "estimated_cost_cny": 0.019346,
+          "elapsed_ms": 19250
+        },
+        {
+          "agent": "grading",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 1606,
+            "completion_tokens": 2692,
+            "total_tokens": 4298
+          },
+          "estimated_cost_cny": 0.011288,
+          "elapsed_ms": 13344
+        },
+        {
+          "agent": "planning",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 4582,
+            "completion_tokens": 2636,
+            "total_tokens": 7218
+          },
+          "estimated_cost_cny": 0.017072,
+          "elapsed_ms": 15688
+        },
+        {
+          "agent": "teaching",
+          "provider": "DeepSeek",
+          "model": "deepseek-chat",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 2589,
+            "completion_tokens": 1967,
+            "total_tokens": 4556
+          },
+          "estimated_cost_cny": 0.011079,
+          "elapsed_ms": 8812
+        },
+        {
+          "agent": "assignment",
+          "provider": "DeepSeek",
+          "model": "deepseek-chat",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 4467,
+            "completion_tokens": 1098,
+            "total_tokens": 5565
+          },
+          "estimated_cost_cny": 0.012228,
+          "elapsed_ms": 6031
+        }
+      ]
+    },
+    {
+      "name": "experienced",
+      "profile": {
+        "topic": "单变量微积分：从函数到极限",
+        "background": "已经学过函数与极限，能熟练计算简单函数值和基本极限。",
+        "goal": "复核基础后深入理解连续性、导数和证明条件。",
+        "hours_per_week": 6,
+        "minutes_per_session": 60,
+        "search_web": false,
+        "request_id": "c0b3d3c054ac4b48a4106bb54ec6a919"
+      },
+      "create_status": "completed",
+      "course_id": "6241e475c72c4e5d91f99e8f4da8ebf1",
+      "diagnostic_question_count": 3,
+      "diagnostic_status": "completed",
+      "diagnostic_score": 0.6,
+      "mastery": {
+        "u01": "unknown",
+        "u02": "unknown",
+        "u03": "unknown",
+        "u04": "unknown",
+        "u05": "unknown",
+        "u06": "unknown",
+        "u07": "unknown",
+        "u08": "unknown",
+        "u09": "unknown",
+        "u10": "unknown",
+        "u11": "unknown",
+        "u12": "unknown"
+      },
+      "plan": {
+        "unit_order": [
+          "u01",
+          "u02",
+          "u03",
+          "u04",
+          "u05",
+          "u06",
+          "u07",
+          "u08",
+          "u09",
+          "u10",
+          "u11",
+          "u12"
+        ],
+        "reason": "前测证据显示：连续性三条件说明缺失（q_continuity_removable_01 得0.6）、导数定义差商过程缺失（q_derivative_definition_reciprocal_02 得0.2），而可导与连续的逻辑关系掌握较好（q_diff_continuity_logic_03 得1.0）。由于所有单元掌握状态均为unknown，不能凭自述跳过任何先修。按先修链 u01→u02→u03→u04→u05→u06→u07→u08→u09→u10→u11→u12 全覆盖，其中u03、u04 针对证据缺口重点加强过程书写与条件说明，u01、u02 作为极限与函数基础快速复核，后续单元按概念与例题结合推进。",
+        "weekly_hours": 6.0,
+        "sessions": [
+          {
+            "unit_id": "u01",
+            "minutes": 30,
+            "focus": "快速复核定义域限制与复合函数条件，重点检查分母、偶次根号、对数真数的限制，并用一个复合函数例子说明先写限制再化简。"
+          },
+          {
+            "unit_id": "u02",
+            "minutes": 45,
+            "focus": "复核极限与函数值的区别、左右极限存在性，结合 (x²-1)/(x-1) 说明化简后极限为2但原函数在1无定义，强调数值表只能猜测。"
+          },
+          {
+            "unit_id": "u03",
+            "minutes": 60,
+            "focus": "针对前测缺口，完整写出连续性的三个条件并逐条验证，用可去间断与跳跃间断对比；练习介值定理的适用条件与零点存在性论证。"
+          },
+          {
+            "unit_id": "u04",
+            "minutes": 60,
+            "focus": "针对前测缺口，严格按导数定义写出差商 [f(a+h)-f(a)]/h、代数化简、取极限三步，重做 1/x 在 a=2 的差商极限；用 |x| 说明连续未必可导。"
+          },
+          {
+            "unit_id": "u05",
+            "minutes": 45,
+            "focus": "概念与例题结合，练习乘积、商和链式法则，重点识别复合结构的内外层并写出完整求导过程，避免遗漏内层倍率。"
+          },
+          {
+            "unit_id": "u06",
+            "minutes": 45,
+            "focus": "隐式求导中注意 y 随 x 变化时对 y² 写 2y y'；相关变化率先建立几何关系再对时间求导，避免过早代入固定值。"
+          },
+          {
+            "unit_id": "u07",
+            "minutes": 45,
+            "focus": "由导数符号判断单调性，区分临界点与极值点；闭区间最值比较内部临界点和端点，优化题先写约束再消元。"
+          },
+          {
+            "unit_id": "u08",
+            "minutes": 30,
+            "focus": "认识原函数族与积分常数 +C，通过求导核验候选原函数；注意 1/x 的原函数为 log|x|+C 的分段定义。"
+          },
+          {
+            "unit_id": "u09",
+            "minutes": 45,
+            "focus": "理解定积分的有向累积含义，用微积分基本定理计算积分；变上限积分求导时注意复合上限的链式因子。"
+          },
+          {
+            "unit_id": "u10",
+            "minutes": 45,
+            "focus": "换元时同时替换微分和积分限，分部积分选择 u 使求导后更简单；算完用求导核验不定积分。"
+          },
+          {
+            "unit_id": "u11",
+            "minutes": 45,
+            "focus": "设置面积与体积积分时注意上方减下方、半径是距离；反常积分用极限定义，每个奇点两侧分别判断收敛。"
+          },
+          {
+            "unit_id": "u12",
+            "minutes": 45,
+            "focus": "区分通项趋零与级数收敛，几何级数求和条件 |r|<1；建立泰勒多项式并说明展开点、阶数与余项控制。"
+          }
+        ],
+        "goal": "复核函数与极限基础后，深入理解连续性三条件、导数定义与差商极限证明，并沿先修链覆盖单变量微积分核心单元，强化过程书写与条件说明。"
+      },
+      "current_unit_id": "u01",
+      "lesson_created": true,
+      "assignment_count": 2,
+      "events": [
+        {
+          "agent": "diagnostic",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 4417,
+            "completion_tokens": 4523,
+            "total_tokens": 8940
+          },
+          "estimated_cost_cny": 0.022403,
+          "elapsed_ms": 19891
+        },
+        {
+          "agent": "grading",
+          "provider": "DeepSeek",
+          "model": "deepseek-chat",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 2234,
+            "completion_tokens": 988,
+            "total_tokens": 3222
+          },
+          "estimated_cost_cny": 0.007432,
+          "elapsed_ms": 4578
+        },
+        {
+          "agent": "planning",
+          "provider": "DeepSeek",
+          "model": "deepseek-chat",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 5260,
+            "completion_tokens": 988,
+            "total_tokens": 6248
+          },
+          "estimated_cost_cny": 0.013484,
+          "elapsed_ms": 5640
+        },
+        {
+          "agent": "teaching",
+          "provider": "DeepSeek",
+          "model": "deepseek-chat",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 3840,
+            "completion_tokens": 1448,
+            "total_tokens": 5288
+          },
+          "estimated_cost_cny": 0.012024,
+          "elapsed_ms": 6969
+        },
+        {
+          "agent": "assignment",
+          "provider": "DeepSeek",
+          "model": "deepseek-chat",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 4628,
+            "completion_tokens": 752,
+            "total_tokens": 5380
+          },
+          "estimated_cost_cny": 0.011512,
+          "elapsed_ms": 4969
+        }
+      ]
+    },
+    {
+      "name": "time_constrained",
+      "profile": {
+        "topic": "单变量微积分：从函数到极限",
+        "background": "记得函数基本概念，但极限和连续性经常混淆。",
+        "goal": "两周内掌握考试常见极限问题，优先补齐必要先修。",
+        "hours_per_week": 1,
+        "minutes_per_session": 15,
+        "search_web": false,
+        "request_id": "818ea95cfe854e80b703924917af20ac"
+      },
+      "create_status": "completed",
+      "course_id": "a0c2502a54664d75a06248f264b7a708",
+      "diagnostic_question_count": 3,
+      "diagnostic_status": "completed",
+      "diagnostic_score": 0.0,
+      "mastery": {
+        "u01": "unknown",
+        "u02": "unknown",
+        "u03": "unknown",
+        "u04": "unknown",
+        "u05": "unknown",
+        "u06": "unknown",
+        "u07": "unknown",
+        "u08": "unknown",
+        "u09": "unknown",
+        "u10": "unknown",
+        "u11": "unknown",
+        "u12": "unknown"
+      },
+      "plan": {
+        "unit_order": [
+          "u01",
+          "u02",
+          "u03"
+        ],
+        "reason": "前测三题均为未作答且校验状态为 undetermined，不能据此认定已掌握任何单元；u01-u12 均为 unknown。本次目标聚焦考试常见极限问题并兼顾用户自述易混淆的连续性，因此只纳入极限与连续性所需的先修链 u01→u02→u03：u01 是函数定义域与复合基础，u02 是极限含义、单侧极限与 0/0 型代数处理，u03 是连续性与介值定理并直接对应前测 q2。u04 及以后不是本次极限/连续性目标的必要先修，暂不纳入。两周每周 1 小时，共 120 分钟；按每次 15 分钟安排 8 次，其中 u01 两次、u02 四次、u03 两次，优先保证极限核心题型训练，同时不跳过未测得的先修知识。",
+        "weekly_hours": 1.0,
+        "sessions": [
+          {
+            "unit_id": "u01",
+            "minutes": 15,
+            "focus": "区分表达式与函数：同一化简式可对应不同定义域；重点识别约分后遗漏的原空点，为极限中 x≠a 的化简铺垫。"
+          },
+          {
+            "unit_id": "u02",
+            "minutes": 15,
+            "focus": "0/0 型有理化法：分子分母同乘共轭式，约去 x 后代入；演练前测 q3 的 (sqrt(1+x)-1)/x，得到 1/2。"
+          },
+          {
+            "unit_id": "u03",
+            "minutes": 15,
+            "focus": "介值定理与考试判断：闭区间连续、端点异号保证有根但不保证唯一；结合多项式零点判断并复习跳跃/可去间断区别。"
+          }
+        ],
+        "goal": "两周内掌握考试常见极限问题，优先补齐必要先修；重点达到识别 0/0 型、使用因式分解与有理化求极限、比较左右极限并判断连续性。"
+      },
+      "current_unit_id": "u01",
+      "lesson_created": true,
+      "assignment_count": 2,
+      "events": [
+        {
+          "agent": "diagnostic",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 4416,
+            "completion_tokens": 4708,
+            "total_tokens": 9124
+          },
+          "estimated_cost_cny": 0.022956,
+          "elapsed_ms": 24109
+        },
+        {
+          "agent": "grading",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 1942,
+            "completion_tokens": 1952,
+            "total_tokens": 3894
+          },
+          "estimated_cost_cny": 0.00974,
+          "elapsed_ms": 11594
+        },
+        {
+          "agent": "planning",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 4964,
+            "completion_tokens": 2158,
+            "total_tokens": 7122
+          },
+          "estimated_cost_cny": 0.016402,
+          "elapsed_ms": 13484
+        },
+        {
+          "agent": "teaching",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 3024,
+            "completion_tokens": 6134,
+            "total_tokens": 9158
+          },
+          "estimated_cost_cny": 0.02445,
+          "elapsed_ms": 29812
+        },
+        {
+          "agent": "assignment",
+          "provider": "DeepSeek",
+          "model": "deepseek-flash",
+          "prompt_version": "2026-10-08.1",
+          "usage": {
+            "prompt_tokens": 8828,
+            "completion_tokens": 12029,
+            "total_tokens": 20857
+          },
+          "estimated_cost_cny": 0.053743,
+          "elapsed_ms": 59000
+        }
+      ]
+    }
+  ]
+}

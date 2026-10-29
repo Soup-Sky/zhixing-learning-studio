@@ -1,0 +1,32 @@
+{
+  "kind": "release_check",
+  "version": "1.3.1",
+  "package": "ZhixingLearningStudio-Windows-1.3.1.zip",
+  "zip_bytes": 31204014,
+  "sha256": "6E5488B38365066E823026412B209F32E32404BC514397A9E1C89AE68D8B23A4",
+  "checked_at": "2026-10-29T13:15:00Z",
+  "method": "scripts/verify_release.py：临时目录解压，冻结 EXE 自检 + 真实本机 HTTP + 无控制台双击启动",
+  "checks": {
+    "zip_has_no_database_or_env": true,
+    "zip_has_no_logs_or_data_dir": true,
+    "zip_name_matches_version": true,
+    "zip_has_no_defense_material": true,
+    "frozen_self_test_exit_0": true,
+    "frozen_self_test_all_true": true,
+    "double_click_started": true,
+    "double_click_needs_setup": true,
+    "double_click_database_in_user_dir": true,
+    "double_click_log_dir_created": true,
+    "second_launch_exits_0": true,
+    "login_required": true,
+    "setup_creates_admin": true,
+    "session_works": true,
+    "admin_backup_is_sqlite": true,
+    "admin_progress_available": true,
+    "cross_site_blocked": true,
+    "web_exit_accepted": true,
+    "web_exit_stops_process": true,
+    "port_released": true
+  },
+  "ok": true
+}
